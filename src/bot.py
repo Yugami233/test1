@@ -93,7 +93,7 @@ class Bot:
             }
         response = requests.get(OMDB, params=omdb_params)
         movie_data = self.memory = response.json()                                  # Save found title in memory
-        data_str = f"Title:    {movie_data['Batch']} ({movie_data['Batch']})\n" \
+        data_str = f"Title:    {movie_data['Paper']} ({movie_data['stream']})\n" \
                    f"├📚 Topic:    {movie_data['Video_Description']}\n" \
                    f"Rating:    {movie_data['Class']}/10\n" \
                    f"Runtime:    {movie_data['Chapter']}\n" \

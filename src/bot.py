@@ -105,8 +105,8 @@ class Bot:
                                    media=[InputMediaPhoto(poster)])  # Show poster
 
         buttons = [[InlineKeyboardButton("Plot", callback_data=f"{movie_data['thumbnail_path']}:plot"),
-                  # InlineKeyboardButton("Trailer", url=self.get_trailer_url(movie_data["imdbID"])),
-                  # InlineKeyboardButton("Ratings", callback_data=f"{movie_data['Title']}:ratings")],
+                   InlineKeyboardButton("Trailer", url=self.get_trailer_url(movie_data["Class"])),
+                   InlineKeyboardButton("Ratings", callback_data=f"{movie_data['Chapter']}:ratings")],
                    [InlineKeyboardButton("IMDB page", url=f"{IMDB_LINK}{movie_data['thumbnail_path']}")]]
         update.message.reply_text(data_str, reply_markup=InlineKeyboardMarkup(buttons))
 
